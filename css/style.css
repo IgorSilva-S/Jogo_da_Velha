@@ -1,0 +1,218 @@
+
+body {
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    transition-duration: .2s;
+
+}
+
+h1 {
+    color: #0632ff;
+}
+
+.dark {
+    background-color: #191919;
+    color: white;
+}
+
+/*Botões*/
+
+#buttonsAlign {
+    margin-bottom: 20px;
+}
+
+#buttonsAlign button {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #0078d4;
+    margin: 0 5px;
+    background-color: #005fd8;
+    color: white;
+    transition-duration: .2s;
+}
+
+#buttonsAlign button:hover {
+    background-color: #0078d4;
+}
+#container {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*Centralizar uma div*/
+    position: relative;
+    margin: 0 auto;
+}
+
+
+.box {
+    border: 5px solid #000;
+    height: 100px;
+    box-sizing: border-box;
+    flex: 1 1 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .2s;
+}
+
+.dark .box {
+    border: 5px solid white;
+}
+
+#block-1,
+#block-2,
+#block-3 {
+    border-top: none;
+}
+
+#block-1,
+#block-4,
+#block-7 {
+    border-left: none;
+}
+
+#block-7,
+#block-8,
+#block-9 {
+    border-bottom: none;
+}
+
+#block-3,
+#block-6,
+#block-9 {
+    border-right: none;
+}
+
+.x {
+    font-size: 65px;
+    color: orangered;
+}
+
+.o {
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 5px solid #0632ff;
+    border-radius: 100%;
+    display: inline-block;
+    transition-duration: .2s;
+}
+
+.dark .o {
+    border: 5px solid #0093ff;
+}
+
+
+/*Placar*/
+#scoreboard-container {
+    font-weight: bold;
+    font-size: 25px;
+    position: relative;
+    margin: 30px auto 0 auto;
+}
+
+#scoreboard-container h2 {
+    font-size: 30px;
+}
+
+#x-scoreboard {
+    color: orangered;
+    margin-right: 3px;
+}
+
+#o-scoreboard {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    border: 2px solid #0632ff;
+    margin-right: 3px;
+    transition-duration: .2s;
+}
+
+.dark #o-scoreboard {
+    border: 2px solid #0093ff
+}
+
+.score-box {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+
+/*Mensagem*/
+#message p{
+    background-color: #000000aa;
+    color: white;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 187px;
+    left: 0;
+    right: 0;
+    width: 500px;
+    padding: 30px;
+    font-size: 50px;
+    border-radius: 8px;
+    backdrop-filter: blur(15px);
+    transition-duration: .2s;
+}
+
+
+.darkSwitch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.darkSw {
+    appearance: none;
+    width: 40px;
+    height: 20px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    transition-duration: .2s;
+    position: relative;
+}
+
+.darkSw:checked {
+    background-color: #0078d4;
+    border: 2px solid #005fd8
+}
+
+.darkSw::after {
+    content: ' ';
+    width: 14px;
+    height: 14px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    background-color: #0078d4;
+    border: 2px solid #005fd8;
+    border-radius: 100%;
+    transition-duration: .2s;
+}
+
+.darkSw:checked::after {
+    left: 20px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+}
+
+
+.darkSw:active::after {
+    width: 20px;
+}
+
+.darkSw:checked:active::after {
+    left: 15px;
+}
+
+.hide {
+    display: none !important;
+}
